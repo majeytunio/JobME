@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainFrame" fx:id="mainFrame" prefHeight="782.0" prefWidth="1655.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pk.jobme.projectmanagementsystem.FXMLController">
+   <children>
+      <AnchorPane id="mainPanel" fx:id="mainPanel" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane id="sideBarPanel" fx:id="sideBarPanel" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button id="sideBarSubBtn" layoutY="264.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Tasks" />
+                  <ImageView id="appLogo" fx:id="appLogo" fitHeight="100.0" fitWidth="100.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <image>
+                        <Image url="@../images/new_app_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="150.0" layoutY="41.0" text="JobME" textFill="WHITE" AnchorPane.leftAnchor="150.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="40.0" />
+                     </font>
+                  </Label>
+                  <Button id="sideBarSubBtn" fx:id="sideBarHomeBtn" layoutY="144.0" mnemonicParsing="false" onMouseEntered="#sideBarHomeBtnMouseEnter" prefHeight="60.0" prefWidth="300.0" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button id="sideBarSubBtn" layoutY="204.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Projects" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button id="sideBarSubBtn" layoutY="324.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Files" />
+                  <Button id="sideBarSubBtn" layoutY="384.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Teams" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="20.0" layoutY="633.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="30.0">
+                     <image>
+                        <Image url="@../images/cloud_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Pane id="usedStorageBarWhite" layoutX="48.0" layoutY="536.0" prefHeight="10.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                  <Pane id="usedStorageBarFill" fx:id="usedStorageBarFill" layoutX="40.0" layoutY="536.0" prefHeight="8.0" prefWidth="35.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="31.0" />
+                  <Label id="spaceTakenPer" fx:id="spaceTakenPer" layoutX="242.0" layoutY="497.0" text="20%" textAlignment="RIGHT" textFill="WHITE" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="contentPanel" fx:id="contentPanel" layoutX="300.0" prefHeight="551.0" prefWidth="1255.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="8.0" layoutY="816.0" prefHeight="1016.0" prefWidth="930.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="-462.0" layoutY="-40.0" prefHeight="120.0" prefWidth="650.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField id="dashSearchTxt" fx:id="dashSearchTxt" layoutX="51.0" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" promptText="Search" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="40.0" />
+                              <ImageView fitHeight="20.0" fitWidth="15.0" layoutX="60.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="53.0">
+                                 <image>
+                                    <Image url="@../images/search_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="titleShowingPane" fx:id="titleShowingPane" layoutX="-402.0" layoutY="80.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="140.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" prefHeight="27.0" prefWidth="180.0" text="Projects" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="778.0" layoutY="10.0" text="View all  &gt;" textFill="#7f7f7f" AnchorPane.rightAnchor="0.39999999999997726">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="-402.0" layoutY="130.0" prefHeight="200.0" prefWidth="840.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="180.0">
+                           <children>
+                              <AnchorPane id="projectsBoxPanel" prefHeight="180.0" prefWidth="260.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="90.0" text="9 tasks">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="40.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                                       <image>
+                                          <Image url="@../images/project_folder_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="15.0" layoutY="51.0" text="JobME Dictionary" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="70.0">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane id="usedStorageBarWhite" layoutX="28.0" layoutY="155.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: DCE1F3;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                    <Pane id="usedStorageBarFill" fx:id="usedStorageBarFill1" layoutX="20.0" layoutY="155.0" prefHeight="8.0" prefWidth="120.0" style="-fx-background-color: #4566bf;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="118.0" layoutY="139.0" text="67%" textFill="#4566bf">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="215.6" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.400000000000006" AnchorPane.topAnchor="15.0">
+                                       <image>
+                                          <Image url="@../images/majey_profile.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="192.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="17.0">
+                                       <image>
+                                          <Image url="@../images/imad_profile.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="projectsBoxPanel" layoutX="270.0" layoutY="10.0" prefHeight="180.0" prefWidth="260.0" AnchorPane.leftAnchor="280.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="90.0" text="15 tasks">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="40.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                                       <image>
+                                          <Image url="@../images/project_folder_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="15.0" layoutY="51.0" text="JobME Quiz App" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="70.0">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane id="usedStorageBarWhite" layoutX="28.0" layoutY="155.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: DCE1F3;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                                    <Pane id="usedStorageBarFill" fx:id="usedStorageBarFill11" layoutX="20.0" layoutY="155.0" prefHeight="8.0" prefWidth="180.0" style="-fx-background-color: #4566bf;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" />
+                                    <Label layoutX="177.0" layoutY="139.0" text="80" textFill="#4566bf">
+                                       <font>
+                                          <Font name="Segoe UI Light" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="215.6" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.400000000000006" AnchorPane.topAnchor="15.0">
+                                       <image>
+                                          <Image url="@../images/majey_profile.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="192.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="17.0">
+                                       <image>
+                                          <Image url="@../images/imad_profile.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="newProjectBoxPanel" layoutX="540.0" layoutY="10.0" prefHeight="180.0" prefWidth="260.0" AnchorPane.leftAnchor="550.0">
+                                 <children>
+                                    <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="94.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/add_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="106.0" layoutY="144.0" text="Add new project" textAlignment="CENTER" textFill="#9c9c9c" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="titleShowingPane" fx:id="titleShowingPane1" layoutX="60.0" layoutY="390.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" prefHeight="27.0" prefWidth="180.0" text="Recent" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="778.0" layoutY="10.0" text="View all  &gt;" textFill="#7f7f7f" AnchorPane.rightAnchor="0.39999999999997726">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="60.0" layoutY="440.0" prefHeight="315.0" prefWidth="890.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="440.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="actionBar" layoutX="1096.0" prefHeight="616.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="86.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+                           <image>
+                              <Image url="@../images/drop_down_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="232.0" layoutY="32.0" prefHeight="18.0" prefWidth="60.0" style="-fx-alignment: center;" text="Majey" textAlignment="CENTER" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="30.0">
+                           <font>
+                              <Font name="Segoe UI Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="155.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="20.0">
+                           <image>
+                              <Image url="@../images/majey_profile.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="72.0" layoutX="102.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="30.0">
+                           <image>
+                              <Image url="@../images/notification_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="#e56c4d" layoutX="139.0" layoutY="408.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="25.0" />
+                        <AnchorPane id="titleShowingPane" layoutX="2.0" layoutY="96.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+                           <children>
+                              <Label layoutX="-41.0" layoutY="9.0" prefHeight="27.0" prefWidth="180.0" text="Activities" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
